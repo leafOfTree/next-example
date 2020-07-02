@@ -1,0 +1,32 @@
+@import '../styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: auto;
+  background: $background;
+
+  .main {
+    flex: 1;
+    padding: 20px 0;
+  }
+  .bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main, .bottom {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: $smallWidth) {
+    .main, .bottom {
+      width: 100%;
+    }
+    .bottom {
+      padding-right: 12px;
+    }
+  }
+}
+
